@@ -6,7 +6,7 @@ const https = require('https');
 router.get('/', (req, res, next) => {
     const search = req.query.search;
     const page = req.query.page;
-    const url = `${omdbbapi.url}?apikey=${omdbbapi.apikey}&s=${search}&p=${page}&r=json`;
+    const url = `${omdbbapi.url}?apikey=${omdbbapi.apikey}&s=${search}&page=${page}&r=json`;
 
     https.get(url, (response) => {
         let content = '';
